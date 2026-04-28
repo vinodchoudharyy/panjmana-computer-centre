@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Panjmana Computer Centre</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="nav-container">
+    <div class="logo">
+      <img src="logo (2).png" alt="Panjmana Logo" class="logo-img">
+      <span>Panjmana CC</span>
+    </div>
+    <ul class="nav-menu">
+      <li><a href="#courses">Courses</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO SECTION -->
+ 
+<div class="hero">
+  <video class="hero-video" src="hero.bg.mp4" autoplay muted loop playsinline></video>
+ 
+  <div class="hero-content">
+    <div class="card text-white bg-primary">
+    
+      <img class="card-img-top" src="holder.js/100px180/" alt="">
+      <div class="card-body">
+     
+      </div>
+    </div>
+    <h1>Panjmana Computer Centre</h1>
+    <p>Transform Your Future with Professional Tech Education</p>
+    <button class="cta-btn" onclick="document.getElementById('courses').scrollIntoView({behavior: 'smooth'})">
+      <i class="fas fa-arrow-down"></i> Explore Courses
+    </button>
+    
+  </div>
+
+  <div class="hero-image">
+    <img src="student.png" alt="Student">
+     
+  </div>
+</div>
+
+<!-- STATS SECTION -->
+<div class="stats">
+  <div class="stat-item">
+    <i class="fas fa-users"></i>
+    <h3>500+</h3>
+    <p>Students Trained</p>
+  </div>
+  <div class="stat-item">
+    <i class="fas fa-trophy"></i>
+    <h3>95%</h3>
+    <p>Success Rate</p>
+  </div>
+  <div class="stat-item">
+    <i class="fas fa-chalkboard-user"></i>
+    <h3>10+</h3>
+    <p>Expert Instructors</p>
+  </div>
+</div>
+
+<!-- COURSES SECTION -->
+<div id="courses" class="courses-section">
+  <h2 class="section-title">Our Courses</h2>
+  
+  <!-- Typing & Languages -->
+  <div class="course-category">
+    <h3 class="category-title"><i class="fas fa-keyboard"></i> Typing & Languages</h3>
+    <div class="courses-container">
+      <div class="course-card">
+        <div class="card-icon"><i class="fas fa-keyboard"></i></div>
+        <h3>Type Hindi</h3>
+        <div class="course-details">
+          <p><i class="fas fa-clock"></i> 3 Months</p>
+        </div>
+        <button class="join-btn" onclick="openForm('Type Hindi - 3 Months')"><i class="fas fa-pen-to-square"></i> Join Now</button>
+      </div>
+
+      <div class="course-card">
+        <div class="card-icon"><i class="fas fa-keyboard"></i></div>
+        <h3>Type English</h3>
+        <div class="course-details">
+          <p><i class="fas fa-clock"></i> 3 Months</p>
+        </div>
+        <button class="join-btn" onclick="openForm('Type English - 3 Months')"><i class="fas fa-pen-to-square"></i> Join Now</button>
+      </div>
+
+      <div class="course-card">
+        <div class="card-icon"><i class="fas fa-user-edit"></i></div>
+        <h3>Steno in Hindi</h3>
+        <div class="course-details">
+          <p><i class="fas fa-clock"></i> 6 Months</p>
+        </div>
+        <button class="join-btn" onclick="openForm('Steno in Hindi - 6 Months')"><i class="fas fa-pen-to-square"></i> Join Now</button>
+      </div>
+
+      <div class="course-card">
+        <div class="card-icon"><i class="fas fa-code"></i></div>
+        <h3>Languages (C/C++)</h3>
+        <div class="course-details">
+          <p><i class="fas fa-clock"></i> 4 Months</p>
+        </div>
+        <button class="join-btn" onclick="openForm('Languages C/C++ - 4 Months')"><i class="fas fa-pen-to-square"></i> Join Now</button>
+      </div>
+
+      <div class="course-card">
+        <div class="card-icon"><i class="fas fa-globe"></i></div>
+        <h3>Internet Surfing</h3>
+        <div class="course-details">
+          <p><i class="fas fa-clock"></i> 1 Month</p>
+        </div>
+        <button class="join-btn" onclick="openForm('Internet Surfing - 1 Month')"><i class="fas fa-pen-to-square"></i> Join Now</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Basic Computer Skills -->
+  <div class="course-category">
+    <h3 class="category-title"><i class="fas fa-laptop"></i> Basic Computer Skills</h3>
+    <div class="courses-container">
+      <div class="course-card">
+        <div class="card-icon"><i class="fas fa-desktop"></i></div>
+        <h3>Basic Computer</h3>
+        <div class="course-details">
+          <p><i class="fas fa-clock"></i> 3 Months</p>
+        </div>
+        <button class="join-btn" onclick="openForm('Basic Computer - 3 Months')"><i class="fas fa-pen-to-square"></i> Join Now</button>
+      </div>
+
+      <div class="course-card">
+        <div class="card-icon"><i class="fas fa-file-alt"></i></div>
+        <h3>Data Entry</h3>
+        <div class="course-details">
+          <p><i class="fas fa-clock"></i> 1 Month</p>
+        </div>
+        <button class="join-btn" onclick="openForm('Data Entry - 1 Month')"><i class="fas fa-pen-to-square"></i> Join Now</button>
+      </div>
+
+      <div class="course-card">
+        <div class="card-icon"><i class="fas fa-paint-brush"></i></div>
+        <h3>DTP Basic</h3>
+        <div class="course-details">
+          <p><i class="fas fa-clock"></i> 3 Months</p>
+        </div>
+        <button class="join-btn" onclick="openForm('DTP Basic - 3 Months')"><i class="fas fa-pen-to-square"></i> Join Now</button>
+      </div>
+
+      <div class="course-card">
+        <div class="card-icon"><i class="fas fa-paint-brush"></i></div>
+        <h3>DTP Advance</h3>
+        <div class="course-details">
+          <p><i class="fas fa-clock"></i> 6 Months</p>
+        </div>
+        <button class="join-btn" onclick="openForm('DTP Advance - 6 Months')"><i class="fas fa-pen-to-square"></i> Join Now</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Accounting -->
+  <div class="course-category">
+    <h3 class="category-title"><i class="fas fa-calculator"></i> Accounting</h3>
+    <div class="courses-container">
+      <div class="course-card">
+        <div class="card-icon"><i class="fas fa-receipt"></i></div>
+        <h3>Account Basic</h3>
+        <div class="course-details">
+          <p><i class="fas fa-clock"></i> 2 Months</p>
+        </div>
+        <button class="join-btn" onclick="openForm('Account Basic - 2 Months')"><i class="fas fa-pen-to-square"></i> Join Now</button>
+      </div>
+
+      <div class="course-card">
+        <div class="card-icon"><i class="fas fa-chart-line"></i></div>
+        <h3>Account Advance</h3>
+        <div class="course-details">
+          <p><i class="fas fa-clock"></i> 4 Months</p>
+        </div>
+        <button class="join-btn" onclick="openForm('Account Advance - 4 Months')"><i class="fas fa-pen-to-square"></i> Join Now</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Certification Courses -->
+  <div class="course-category">
+    <h3 class="category-title"><i class="fas fa-certificate"></i> Certification Courses</h3>
+    <div class="courses-container">
+      <div class="course-card featured">
+        <div class="featured-badge">POPULAR</div>
+        <div class="card-icon"><i class="fas fa-certificate"></i></div>
+        <h3>RSCIT Course</h3>
+        <div class="course-details">
+          <p><i class="fas fa-clock"></i> 3 Months</p>
+          <p><i class="fas fa-star"></i> Government Certified</p>
+        </div>
+        <button class="join-btn featured-btn" onclick="openForm('RSCIT Course - 3 Months')"><i class="fas fa-pen-to-square"></i> Join Now</button>
+      </div>
+
+      <div class="course-card">
+        <div class="card-icon"><i class="fas fa-trophy"></i></div>
+        <h3>Microsoft Office (MOS)</h3>
+        <div class="course-details">
+          <p><i class="fas fa-clock"></i> 3 Months</p>
+        </div>
+        <button class="join-btn" onclick="openForm('Microsoft Office MOS - 3 Months')"><i class="fas fa-pen-to-square"></i> Join Now</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Online & Professional Development -->
+  <div class="course-category">
+    <h3 class="category-title"><i class="fas fa-laptop-code"></i> Online & Professional Development</h3>
+    <div class="courses-container">
+      <div class="course-card">
+        <div class="card-icon"><i class="fas fa-book-open"></i></div>
+        <h3>Digital Learning</h3>
+        <div class="course-details">
+          <p><i class="fas fa-clock"></i> Flexible Duration</p>
+        </div>
+        <button class="join-btn" onclick="openForm('Digital Learning')"><i class="fas fa-pen-to-square"></i> Join Now</button>
+      </div>
+
+      <div class="course-card">
+        <div class="card-icon"><i class="fas fa-microphone"></i></div>
+        <h3>Spoken English</h3>
+        <div class="course-details">
+          <p><i class="fas fa-clock"></i> 3 Months</p>
+        </div>
+        <button class="join-btn" onclick="openForm('Spoken English - 3 Months')"><i class="fas fa-pen-to-square"></i> Join Now</button>
+      </div>
+
+      <div class="course-card">
+        <div class="card-icon"><i class="fas fa-table"></i></div>
+        <h3>Advance Excel</h3>
+        <div class="course-details">
+          <p><i class="fas fa-clock"></i> 2 Months</p>
+        </div>
+        <button class="join-btn" onclick="openForm('Advance Excel - 2 Months')"><i class="fas fa-pen-to-square"></i> Join Now</button>
+      </div>
+
+      <div class="course-card">
+        <div class="card-icon"><i class="fas fa-palette"></i></div>
+        <h3>Web Design</h3>
+        <div class="course-details">
+          <p><i class="fas fa-clock"></i> 4 Months</p>
+        </div>
+        <button class="join-btn" onclick="openForm('Web Design - 4 Months')"><i class="fas fa-pen-to-square"></i> Join Now</button>
+      </div>
+
+      <div class="course-card">
+        <div class="card-icon"><i class="fas fa-star"></i></div>
+        <h3>Personal Development</h3>
+        <div class="course-details">
+          <p><i class="fas fa-clock"></i> 2 Months</p>
+        </div>
+        <button class="join-btn" onclick="openForm('Personal Development - 2 Months')"><i class="fas fa-pen-to-square"></i> Join Now</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- REWARDS GAME SECTION -->
+<div class="rewards-box">
+
+  <div class="new-tag">✨ New Feature</div>
+
+  <div class="gift-icon">🎁</div>
+
+  <div class="content">
+    <h2>Earn Rewards & Get Discounts!</h2>
+    <p>Play SCard Game daily & win rewards</p>
+
+    <div class="badges">
+      <div class="badge">🏆 10% OFF</div>
+      <div class="badge">🥇 30% OFF</div>
+      <div class="badge">👑 FREE</div>
+    </div>
+  </div>
+
+  <button class="play-btn" onclick="openGame()">Start Playing</button>
+
+</div>
+
+<!-- MODAL GAME -->
+<div class="modal" id="gameModal">
+  <div class="modal-content">
+    <h3>🎮 Pick a Card</h3>
+
+    <div class="cards">
+      <div class="card" onclick="reward(this)">?</div>
+      <div class="card" onclick="reward(this)">?</div>
+      <div class="card" onclick="reward(this)">?</div>
+    </div>
+
+    <p id="result"></p>
+
+    <a href="https://wa.me/919999999999" class="whatsapp-btn">
+      Join via WhatsApp
+    </a>
+
+    <br><br>
+    <button onclick="closeGame()">Close</button>
+  </div>
+</div>
+
+<!-- RSCIT FEATURED SECTION -->
+<section id="rscit-featured" class="rscit-section">
+  <div class="rscit-container">
+    <div class="rscit-badge-float">
+      <span class="rscit-popular-tag"><i class="fas fa-fire"></i> Most Popular</span>
+    </div>
+    
+    <div class="rscit-content">
+      <div class="rscit-left">
+        <div class="rscit-icon-wrap">
+          <i class="fas fa-certificate"></i>
+          <div class="rscit-icon-glow"></div>
+        </div>
+        <h2 class="rscit-title">RSCIT Course</h2>
+        <p class="rscit-subtitle">Rajasthan State Certificate in Information Technology</p>
+        <p class="rscit-desc">Government certified course recognized across Rajasthan. Perfect for government job applications and computer literacy certification.</p>
+        
+        <ul class="rscit-features">
+          <li><i class="fas fa-check-circle"></i> Government Approved Certificate</li>
+          <li><i class="fas fa-check-circle"></i> 100% Practical Training</li>
+          <li><i class="fas fa-check-circle"></i> Exam Preparation Included</li>
+          <li><i class="fas fa-check-circle"></i> Flexible Batch Timings</li>
+          <li><i class="fas fa-check-circle"></i> Experienced Faculty</li>
+        </ul>
+      </div>
+      
+      <div class="rscit-right">
+        <div class="rscit-pricing-card">
+          <div class="rscit-card-header">
+            <span class="rscit-tag">Best Value</span>
+          </div>
+          <div class="rscit-price">
+            <span class="rscit-currency">₹</span>
+            <span class="rscit-amount">2,999</span>
+            <span class="rscit-original">₹4,500</span>
+          </div>
+          <p class="rscit-price-note">Limited Time Offer</p>
+          
+          <div class="rscit-info-list">
+            <div class="rscit-info-item">
+              <i class="fas fa-clock"></i>
+              <span><strong>Duration:</strong> 3 Months</span>
+            </div>
+            <div class="rscit-info-item">
+              <i class="fas fa-calendar-check"></i>
+              <span><strong>Exam:</strong> Vardhaman Mahaveer Open University</span>
+            </div>
+            <div class="rscit-info-item">
+              <i class="fas fa-award"></i>
+              <span><strong>Certificate:</strong> Govt. of Rajasthan</span>
+            </div>
+            <div class="rscit-info-item">
+              <i class="fas fa-users"></i>
+              <span><strong>Batch Size:</strong> Small Groups</span>
+            </div>
+          </div>
+          
+          <button class="rscit-whatsapp-btn" onclick="joinRSCITWhatsApp()">
+            <i class="fab fa-whatsapp"></i> Join Now on WhatsApp
+          </button>
+          <p class="rscit-btn-note">Direct admission via WhatsApp</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<div class="why-us">
+  <h2 class="section-title">Why Choose Us?</h2>
+  <div class="features-grid">
+    <div class="feature">
+      <i class="fas fa-person-chalkboard"></i>
+      <h4>Expert Trainers</h4>
+      <p>Industry experienced professionals</p>
+    </div>
+    <div class="feature">
+      <i class="fas fa-computer"></i>
+      <h4>Modern Lab</h4>
+      <p>Latest computers and software</p>
+    </div>
+    <div class="feature">
+      <i class="fas fa-certificate"></i>
+      <h4>Certification</h4>
+      <p>Recognized certificates</p>
+    </div>
+    <div class="feature">
+      <i class="fas fa-job"></i>
+      <h4>Placement Support</h4>
+      <p>Job assistance after course</p>
+    </div>
+  </div>
+</div>
+
+<!-- CONTACT SECTION -->
+<div id="contact" class="contact-section">
+  <h2 class="section-title">Contact Us</h2>
+  <div class="contact-grid">
+    <div class="contact-card">
+      <div class="contact-card-header">
+        <div>
+          <h3>Message Us Directly</h3>
+          <p>Fill out the form and our team will get back to you within 24 hours.</p>
+        </div>
+        <span class="contact-badge">New</span>
+      </div>
+
+      <div class="contact-form-card">
+        <label for="contact-name">Full Name</label>
+        <input id="contact-name" class="contact-input" type="text" placeholder="Enter your full name">
+
+        <label for="contact-email">Email</label>
+        <input id="contact-email" class="contact-input" type="email" placeholder="Enter your email">
+
+        <label for="contact-phone">Phone</label>
+        <input id="contact-phone" class="contact-input" type="tel" placeholder="Enter your phone number">
+
+        <label for="contact-message">Message</label>
+        <textarea id="contact-message" class="contact-input contact-textarea" placeholder="Write your message"></textarea>
+
+        <button class="contact-submit-btn" type="button" onclick="submitContactForm()">Send Message</button>
+      </div>
+    </div>
+
+    <div class="contact-image-card">
+      <img src="contact logo.png" alt="Student Guide">
+    </div>
+  </div>
+</div>
+
+<!-- FORM POPUP -->
+<div id="formPopup" class="form-popup">
+  <div class="form-box">
+    <span class="close" onclick="closeForm()"><i class="fas fa-times"></i></span>
+    <h2><i class="fas fa-edit"></i> Register Now</h2>
+    <p class="form-subtitle">Join our community of learners</p>
+
+    <input type="text" id="name" placeholder="👤 Your Full Name" required>
+    <input type="tel" id="phone" placeholder="📱 Mobile Number" required>
+    <input type="text" id="courseName" readonly placeholder="Course Selected">
+
+    <button onclick="sendWhatsApp()" class="submit-btn">
+      <i class="fab fa-whatsapp"></i> Submit via WhatsApp
+    </button>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <p>&copy; 2024 Panjmana Computer Centre. All rights reserved.</p>
+  <div class="social-links">
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-whatsapp"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="https://maps.app.goo.gl/1jd4oYLpwRNwnUEW8?g_st=aw" target="_blank" class="map-link"><i class="fas fa-map-marker-alt"></i></a>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
