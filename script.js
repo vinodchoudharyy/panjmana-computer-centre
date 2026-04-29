@@ -218,22 +218,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // =========================
-  // NAVBAR EFFECT
+  // NAVBAR - KEEP FIXED (NO SCROLL EFFECT)
   // =========================
-  window.addEventListener('scroll', () => {
-    const navbar = document.querySelector('.navbar');
-
-    if (!navbar) return;
-
-    if (window.scrollY > 100) {
-      navbar.classList.add('scrolled');
-      navbar.style.background = 'rgba(255,255,255,0.95)';
-      navbar.style.backdropFilter = 'blur(20px)';
-    } else {
-      navbar.classList.remove('scrolled');
-      navbar.style.background = '';
-      navbar.style.backdropFilter = '';
-    }
-  });
-
+  // Navbar stays with gradient background always - no change on scroll
 });
