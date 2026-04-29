@@ -1,8 +1,22 @@
-/* ========== GLOBAL STYLES ========== */
+/* ========== MOBILE FIRST GLOBAL STYLES ========== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Mobile-first base */
+body {
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  background: #f8f9fb;
+  color: #2c3e50;
+  line-height: 1.6;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+  -webkit-text-size-adjust: 100%; /* iOS text zoom fix */
 }
 
 img {
@@ -26,6 +40,10 @@ body {
 /* ========== NAVBAR ========== */
 
 .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
   background: linear-gradient(135deg, #0093E9 0%, #80D0C7 100%);
   backdrop-filter: blur(10px);
   box-shadow: 0 4px 20px rgba(0, 147, 233, 0.3);
@@ -35,7 +53,7 @@ body {
 }
 
 .navbar .logo span {
-  color: white;
+  color: #2c3e50;
 }
 
 .navbar .nav-menu a {
@@ -62,7 +80,7 @@ body {
   gap: 12px;
   font-size: 1.3rem;
   font-weight: 700;
-  color: #2c3e50;
+  color: white;
 }
 
 .logo-img {
@@ -87,11 +105,16 @@ body {
     flex-direction: column;
     gap: 10px;
   }
+
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
 
 .nav-menu a {
   text-decoration: none;
-  color: #555;
+  color: rgba(255,255,255,0.9);
   font-weight: 500;
   transition: 0.3s;
   position: relative;
@@ -120,15 +143,27 @@ body {
 /* ========== HERO SECTION ========== */
 .hero {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  padding: 140px 40px 100px;
+  justify-content: center;
+  padding: 100px 20px 80px;
   color: white;
   background: linear-gradient(135deg, #0093E9 0%, #80D0C7 100%);
   position: relative;
   overflow: hidden;
-  min-height: 600px;
-  gap: 50px;
+  min-height: 100vh;
+  gap: 30px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    flex-direction: row;
+    padding: 140px 40px 100px;
+    gap: 50px;
+    text-align: left;
+    min-height: 600px;
+  }
 }
 
 .hero-video {
@@ -193,11 +228,13 @@ body {
   font-weight: 300;
 }
 
-.cta-btn {
+.hero button, .cta-btn {
+  margin-top: 15px;
+  padding: 12px 20px;
+  width: fit-content;
   background: linear-gradient(135deg, #00d4ff, #0099ff);
   color: white;
   border: none;
-  padding: 16px 45px;
   font-size: 1rem;
   border-radius: 50px;
   cursor: pointer;
@@ -216,22 +253,27 @@ body {
 }
 
 /* ========== STATS SECTION ========== */
-.stats {
+.stats, .courses-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 25px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  padding: 20px;
   max-width: 1400px;
-  margin: -60px auto 80px;
-  padding: 0 20px;
-  position: relative;
-  z-index: 10;
+  margin: 0 auto;
 }
 
-.stat-item {
-  background: white;
-  padding: 45px;
-  border-radius: 20px;
+@media (max-width: 768px) {
+  .stats, .courses-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.stat-card, .stat-item {
+  padding: 20px;
+  border-radius: 15px;
   text-align: center;
+  font-size: 14px;
+  background: white;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
   transition: 0.4s;
   border: 1px solid #f0f0f0;
@@ -250,9 +292,9 @@ body {
   margin-bottom: 15px;
 }
 
-.stat-item h3 {
+.stat-item h2, .stat-item h3 {
   color: #0093E9;
-  font-size: 2.2rem;
+  font-size: 22px;
   margin: 15px 0;
   font-weight: 700;
 }
@@ -332,9 +374,19 @@ body {
 
 .courses-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-  max-width: 1400px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  max-width: 100%;
+}
+
+@media (max-width: 480px) {
+  .stats, .courses-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .course-card {
+    min-height: 320px;
+  }
 }
 
 .course-card {
@@ -1584,20 +1636,33 @@ body {
 
 /* ========== REWARDS GAME SECTION ========== */
 .rewards-box {
-  max-width: 1200px;
-  margin: 80px auto;
+  max-width: 100%;
+  margin: 40px 15px;
   background: linear-gradient(135deg, rgba(255,255,255,0.15), rgba(255,255,255,0.05));
   backdrop-filter: blur(20px);
-  border-radius: 25px;
-  padding: 40px;
-  display: flex;
+  border-radius: 20px;
+  padding: 25px;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 20px;
   position: relative;
   color: white;
   border: 1px solid rgba(255,255,255,0.2);
   animation: fadeIn 1s ease;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .rewards-box {
+    max-width: 1200px;
+    margin: 80px auto;
+    flex-direction: row;
+    padding: 40px;
+    gap: 30px;
+    text-align: left;
+  }
 }
 
 @keyframes fadeIn {
