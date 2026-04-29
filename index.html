@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Panjmana Computers & Type College</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, shrink-to-fit=no">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -18,9 +18,14 @@
   <div class="nav-container">
     <div class="logo">
       <img src="logo (2).png" alt="Panjmana Logo" class="logo-img">
-      <span>Panjmana Computers & Type College</span>
+      <span>Panjmana Computers</span>
     </div>
-    <ul class="nav-menu">
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navMenu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <ul class="nav-menu" id="navMenu" aria-hidden="true">
       <li><a href="#courses">Courses</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#contact">Contact</a></li>
@@ -512,7 +517,7 @@
 </a>
 <a href="https://wa.me/919999999999" class="floating-whatsapp-btn" title="Contact Us">
   <i class="fab fa-whatsapp"></i>
-  <span class="btn-label">Contact Us</span>
+  <span class="btn-label">Contact</span>
 </a>
 
 <script src="script.js"></script>
