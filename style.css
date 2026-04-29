@@ -1491,6 +1491,53 @@ body {
   animation: none;
 }
 
+/* ========== FORCE FIX (RESPONSIVENESS OVERRIDES) ========== */
+/* FORCE FIX */
+.stats-container,
+.courses-container {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 15px !important;
+  padding: 15px;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .stats-container,
+  .courses-container {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .stats-container,
+  .courses-container {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+.stat-card,
+.course-card {
+  width: 100% !important;
+}
+
+/* HERO SECTION FIX */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 30px 15px;
+}
+
+.hero-content {
+  max-width: 100%;
+}
+
+.hero h1 {
+  font-size: clamp(26px, 6vw, 42px);
+}
+
 .floating-map-btn::before {
   content: '';
   position: absolute;
