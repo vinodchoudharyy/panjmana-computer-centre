@@ -155,9 +155,11 @@ body {
 }
 
 .logo-img {
-  height: 45px;
+  height: 90px;
   width: auto;
   object-fit: contain;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.1));
+  flex-shrink: 0;
 }
 
 .nav-menu {
@@ -858,7 +860,7 @@ section, div[id] {
 }
 
 .logo-img {
-  height: 45px;
+  height: 90px;
   width: auto;
   object-fit: contain;
   filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.1));
@@ -971,9 +973,9 @@ section, div[id] {
     font-size: 1rem;
   }
 
-  .logo-img {
-    height: 40px;
-  }
+   .logo-img {
+     height: 75px;
+   }
 
   .nav-container {
     padding: 0.9rem 1.2rem;
