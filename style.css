@@ -61,6 +61,15 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: nowrap;
+}
+
+.nav-container .logo {
+  white-space: nowrap;
+}
+
+.nav-menu {
+  white-space: nowrap;
 }
 
 .logo {
@@ -129,21 +138,34 @@ a {
   padding: 120px 40px 100px;
   min-height: 100vh;
   position: relative;
-  background: url('piotr-chrobot-6oUsyeYXgTg-unsplash.jpg') no-repeat center center;
-  background-size: cover;
-  background-attachment: fixed;
+  background: #000;
   color: white;
+  overflow: hidden;
 }
 
-.hero::before {
+
+.hero-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 0;
+  object-fit: cover;
+}
+
+.hero-overlay {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  
- 
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
 }
 
 .hero-content {
@@ -316,7 +338,7 @@ a {
 
 .courses-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
   width: 100%;
 }
@@ -1268,8 +1290,8 @@ section[id] {
 
 /* Courses container width fix */
 .courses-container {
-  max-width: 1200px !important;
-  margin: 0 auto !important;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /* Ensure consistent layout */
@@ -1277,4 +1299,127 @@ section[id] {
   max-width: 1200px;
   margin-left: auto !important;
   margin-right: auto !important;
+}
+
+/* 📱 MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+    body {
+        min-width: auto;
+        padding-bottom: 60px;
+    }
+
+    /* Navbar */
+    .nav-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+        padding: 1rem;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .logo {
+        font-size: 1rem;
+    }
+
+    .logo-img {
+        height: 60px;
+    }
+
+    /* Hero Section */
+    .hero {
+        padding: 100px 20px 60px;
+    }
+
+    .hero h1 {
+        font-size: 22px;
+        line-height: 30px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .hero .cta-btn {
+        padding: 12px 24px;
+        font-size: 0.9rem;
+    }
+
+    /* Stats */
+    .stats-container {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+/* Courses */
+    .courses-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .course-category {
+        margin-bottom: 40px;
+    }
+
+    .category-title {
+        font-size: 1.5rem;
+    }
+
+    /* RSCIT Section */
+    .rscit-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .rscit-title {
+        font-size: 2rem;
+    }
+
+    .rscit-amount {
+        font-size: 2.5rem;
+    }
+
+    /* Why Choose Us */
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Contact */
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-card-header {
+        flex-direction: column;
+    }
+
+    /* Rewards Box */
+    .rewards-box {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .badges {
+        justify-content: center;
+    }
+
+    /* Floating Buttons */
+    .floating-map-btn,
+    .floating-whatsapp-btn {
+        width: 50px;
+        height: 50px;
+    }
+
+    .floating-map-btn {
+        bottom: 80px;
+        right: 15px;
+    }
+
+.floating-whatsapp-btn {
+        bottom: 15px;
+        right: 15px;
+    }
 }
