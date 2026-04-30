@@ -1309,45 +1309,62 @@ section[id] {
         padding-bottom: 60px;
     }
 
-    /* Navbar */
+    /* Navbar - horizontal straight line */
     .nav-container {
-        flex-direction: column;
-        text-align: center;
-        gap: 15px;
-        padding: 1rem;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        padding: 0.8rem 1rem;
     }
 
     .nav-menu {
-        flex-direction: column;
+        flex-direction: row;
         gap: 15px;
-        text-align: center;
+        font-size: 0.75rem;
+    }
+
+    .nav-menu a {
+        padding: 5px 0;
     }
 
     .logo {
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
 
     .logo-img {
-        height: 60px;
+        height: 45px;
     }
 
-    /* Hero Section */
+    /* Hero Section - full screen video */
     .hero {
-        padding: 100px 20px 60px;
+        padding: 80px 15px 50px;
+        min-height: 100vh;
+    }
+
+    .hero video {
+        min-width: 100%;
+        min-height: 100%;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        left: 0;
+        top: 0;
+        transform: none;
     }
 
     .hero h1 {
-        font-size: 22px;
-        line-height: 30px;
+        font-size: 20px;
+        line-height: 28px;
     }
 
     .hero p {
-        font-size: 14px;
+        font-size: 13px;
     }
 
     .hero .cta-btn {
-        padding: 12px 24px;
-        font-size: 0.9rem;
+        padding: 10px 20px;
+        font-size: 0.85rem;
     }
 
     /* Stats */
@@ -1356,17 +1373,48 @@ section[id] {
         padding: 20px;
     }
 
-/* Courses */
+/* Courses - 3 columns on mobile */
     .courses-container {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+
+    .course-card {
+        min-width: 0;
+    }
+
+    .course-card h3 {
+        font-size: 0.9rem;
+        padding: 10px 12px 5px;
+    }
+
+    .card-icon {
+        padding: 20px;
+        min-height: 80px;
+    }
+
+    .card-icon img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .course-details {
+        padding: 5px 12px 12px;
+        font-size: 0.75rem;
+    }
+
+    .join-btn {
+        width: 90%;
+        padding: 8px 12px;
+        font-size: 0.75rem;
     }
 
     .course-category {
-        margin-bottom: 40px;
+        margin-bottom: 30px;
     }
 
     .category-title {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
 
     /* RSCIT Section */
@@ -1376,7 +1424,7 @@ section[id] {
     }
 
     .rscit-title {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
     .rscit-amount {
