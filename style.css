@@ -55,13 +55,14 @@ a {
 }
 
 .nav-container {
-  max-width: 1400px;
+  max-width: 100%;
   margin: 0 auto;
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: nowrap;
+  width: 100%;
 }
 
 .nav-container .logo {
@@ -338,7 +339,7 @@ a {
 
 .courses-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   width: 100%;
 }
